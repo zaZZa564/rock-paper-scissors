@@ -92,5 +92,5 @@ while(humanScore != 5 || computerScore != 5) {
 }
 
 function testFunction(a, b) {
-  return a + b;
+  console.log(`Result is: ${a - b}`);
 }
