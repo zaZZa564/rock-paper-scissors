@@ -90,3 +90,7 @@ while(humanScore != 5 || computerScore != 5) {
   computerSelection = computerChoice();
   playRound(humanSelection, computerSelection);
 }
+
+function testFunction(a, b) {
+  return a + b;
+}
