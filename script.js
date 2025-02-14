@@ -21,8 +21,10 @@ function humanChoice() {
 }
 
 function displayScore() {
-  console.log(`Your score is: ${humanScore}`);
-  console.log(`Computer score is: ${computerScore}`);
+  const humanScoreDiv = document.querySelector('.humanScore');
+  humanScoreDiv.textContent = `Your score is: ${humanScore}`;
+  const computerScoreDiv = document.querySelector('.computerScore');
+  computerScoreDiv.textContent = `Your score is: ${computerScore}`;
 }
 
 function playRound(humanChoice, computerChoice) {
