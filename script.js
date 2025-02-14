@@ -27,21 +27,22 @@ function displayScore() {
   computerScoreDiv.textContent = `Your score is: ${computerScore}`;
 }
 
+const resultDiv = document.querySelector('.result');
 function playRound(humanChoice, computerChoice) {
   switch(humanChoice) {
     case 'rock':
       switch(computerChoice) {
         case 'rock':
-          console.log('Draw');
+          resultDiv.textContent = 'Draw';
           displayScore();
           break;
         case 'paper':
-          console.log('You lose! paper beats rock');
+          resultDiv.textContent = 'You lose! paper beats rock';
           computerScore++;
           displayScore();
           break;
         case 'scissors':
-          console.log('You win! rock beats scissors');
+          resultDiv.textContent = 'You win! rock beats scissors';
           humanScore++;
           displayScore();
           break;
@@ -50,16 +51,16 @@ function playRound(humanChoice, computerChoice) {
     case 'paper':
       switch(computerChoice) {
         case 'rock':
-          console.log('You win! paper beats rock');
+          resultDiv.textContent = 'You win! paper beats rock';
           humanScore++;
           displayScore();
           break;
         case 'paper':
-          console.log('Draw');
+          resultDiv.textContent = 'Draw';
           displayScore();
           break;
         case 'scissors':
-          console.log('You lose! scissors beat paper');
+          resultDiv.textContent = 'You lose! scissors beat paper';
           computerScore++;
           displayScore();
           break;
@@ -68,17 +69,17 @@ function playRound(humanChoice, computerChoice) {
     case 'scissors':
       switch(computerChoice) {
         case 'rock':
-          console.log('You lose! rock beats scissors');
+          resultDiv.textContent = 'You lose! rock beats scissors';
           computerScore++;
           displayScore();
           break;
         case 'paper':
-          console.log('You win! scissors beat paper');
+          resultDiv.textContent = 'You win! scissors beat paper';
           humanScore++;
           displayScore();
           break;
         case 'scissors':
-          console.log('Draw');
+          resultDiv.textContent = 'Draw';
           displayScore();
           break;
       }
