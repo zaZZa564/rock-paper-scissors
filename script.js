@@ -85,12 +85,6 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // game process
-while(humanScore != 5 || computerScore != 5) {
   humanSelection = humanChoice();
   computerSelection = computerChoice();
   playRound(humanSelection, computerSelection);
-}
-
-function testFunction(a, b) {
-  console.log(`Result is: ${a - b}`);
-}
