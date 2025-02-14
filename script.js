@@ -48,7 +48,7 @@ function playRound(humanChoice, computerChoice) {
     case 'paper':
       switch(computerChoice) {
         case 'rock':
-          console.log('You win! rock beats paper');
+          console.log('You win! paper beats rock');
           humanScore++;
           displayScore();
           break;
@@ -85,6 +85,12 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // game process
-  humanSelection = humanChoice();
-  computerSelection = computerChoice();
-  playRound(humanSelection, computerSelection);
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    let humanSelection = this.querySelector('img').alt;
+    let computerSelection = computerChoice();
+    playRound(humanSelection, computerSelection);
+  });
+});
