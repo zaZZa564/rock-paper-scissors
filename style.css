@@ -1,4 +1,51 @@
-img {
+body {
+  background-color: #222831;
+  font-family: 'Roboto', sans-serif;
+}
+div {
+  color: #EEEEEE;
+}
+button {
+  background-color: #00ADB5;
+  margin: 16px;
+  flex: none;
+  border: none;
+  padding: none;
+  border: 6px solid #393E46;
+  border-radius: 8px;
   width: 128px;
   height: 128px;
+}
+img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+/* flexbox styling */
+.scoreContainer {
+  display: flex;
+  flex-direction: row;
+}
+.score {
+  flex: 1;
+}
+.imgContainer {
+  display: flex;
+}
+.buttonsContainer {
+  display: flex;
+  flex: 1;
+  justify-content: start;
+  padding-right: 540px;
+}
+.computerSelectionContainer {
+  display: flex;
+  flex: 1;
+}
+.computerImg {
+  flex: 1;
+  padding: 8px;
+  margin: 16px;
+  border: 6px solid #393E46;
+  border-radius: 8px;
 }

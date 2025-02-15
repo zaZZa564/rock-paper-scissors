@@ -1,17 +1,19 @@
 let humanScore = 0;
 let computerScore = 0;
-let humanSelection;
-let computerSelection;
 
 function computerChoice() {
   let rand = Math.random();
+  const computerSelection = document.querySelector('.computerSelection');
   if(rand < 0.333) {
+    computerSelection.innerHTML = '<img src="./img/rock.png" alt="rock" class="computerImg">';
     return 'rock';
   }
   else if(rand < 0.666) {
+    computerSelection.innerHTML = '<img src="./img/paper.png" alt ="paper" class="computerImg">';
     return 'paper';
   }
   else {
+    computerSelection.innerHTML = '<img src="./img/scissors.png" alt ="scissors" class="computerImg">';
     return 'scissors';
   }
 }
@@ -24,7 +26,7 @@ function displayScore() {
   const humanScoreDiv = document.querySelector('.humanScore');
   humanScoreDiv.textContent = `Your score is: ${humanScore}`;
   const computerScoreDiv = document.querySelector('.computerScore');
-  computerScoreDiv.textContent = `Your score is: ${computerScore}`;
+  computerScoreDiv.textContent = `Computer score is: ${computerScore}`;
 }
 
 const resultDiv = document.querySelector('.result');
@@ -93,7 +95,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
   button.addEventListener('click', function() {
     let humanSelection = this.querySelector('img').alt;
-    let computerSelection = computerChoice();
-    playRound(humanSelection, computerSelection);
+    let computerSelection2 = computerChoice();
+    playRound(humanSelection, computerSelection2);
   });
 });

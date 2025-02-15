@@ -4,16 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="./script.js" defer></script>
   <title>rock paper scissors</title>
 </head>
 
 <body>
-  <div class="humanScore">Your score is: 0</div>
-  <div class="computerScore">Computer score is: 0</div>
-  <button><img src="./img/rock.png" alt="rock"></button>
-  <button><img src="./img/paper.png" alt="paper"></button>
-  <button><img src="./img/scissors.png" alt="scissors"></button>
+  <div class="scoreContainer">
+    <div class="humanScore score">Your score is: 0</div>
+    <div class="computerScore score">Computer score is: 0</div>
+  </div>
+  <div class="imgContainer">
+    <div class="buttonsContainer">
+      <button><img src="./img/rock.png" alt="rock"></button>
+      <button><img src="./img/paper.png" alt="paper"></button>
+      <button><img src="./img/scissors.png" alt="scissors"></button>
+    </div>
+    <div class="computerSelectionContainer">
+      <div class="computerSelection"></div>
+    </div>
+  </div>
   <div class="result"></div>
 </body>
 </html>
