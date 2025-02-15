@@ -1,4 +1,14 @@
+body {
+  background-color: #222831;
+}
+div {
+  color: #EEEEEE;
+}
+button {
+  background-color: #00ADB5;
+}
 img {
   width: 128px;
   height: 128px;
 }
+/* flexbox styling */
