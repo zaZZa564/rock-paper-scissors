@@ -4,6 +4,10 @@ let computerScore = 0;
 function computerChoice() {
   let rand = Math.random();
   const computerSelection = document.querySelector('.computerSelection');
+  
+  // Сначала очищаем предыдущий выбор
+  computerSelection.innerHTML = '';
+  
   if(rand < 0.333) {
     computerSelection.innerHTML = '<img src="./img/rock.png" alt="rock" class="computerImg">';
     return 'rock';
