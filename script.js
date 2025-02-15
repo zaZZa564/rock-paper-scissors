@@ -95,6 +95,7 @@ function playRound(humanChoice, computerChoice) {
 
 // game process
 const buttons = document.querySelectorAll('button');
+let winner;
 
 buttons.forEach(button => {
   button.addEventListener('click', function() {
