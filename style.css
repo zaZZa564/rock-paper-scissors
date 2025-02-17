@@ -75,10 +75,11 @@ h1 {
   border: 6px solid #393E46;
   border-radius: 8px;
   opacity: 0;
-  animation: fadeIn 0.4s ease-in forwards;
+  animation: fadeIn 0.2s ease-in forwards;
 }
 .result {
   font-size: 24px;
+  animation: fadeIn 0.4s ease-in forwards;
 }
 
 @keyframes fadeIn {

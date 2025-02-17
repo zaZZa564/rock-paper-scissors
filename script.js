@@ -34,21 +34,30 @@ function displayScore() {
 }
 
 const resultDiv = document.querySelector('.result');
+function animateResult(text) {
+  resultDiv.style.opacity = '0';
+  resultDiv.innerHTML = text;
+  // Форсируем перезапуск анимации
+  resultDiv.style.animation = 'none';
+  resultDiv.offsetHeight; // Триггер reflow
+  resultDiv.style.animation = 'fadeIn 0.4s ease-in forwards';
+}
+
 function playRound(humanChoice, computerChoice) {
   switch(humanChoice) {
     case 'rock':
       switch(computerChoice) {
         case 'rock':
-          resultDiv.textContent = 'Draw';
+          animateResult('Draw');
           displayScore();
           break;
         case 'paper':
-          resultDiv.textContent = 'You lose! paper beats rock';
+          animateResult('You lose! paper beats rock');
           computerScore++;
           displayScore();
           break;
         case 'scissors':
-          resultDiv.textContent = 'You win! rock beats scissors';
+          animateResult('You win! rock beats scissors');
           humanScore++;
           displayScore();
           break;
@@ -57,16 +66,16 @@ function playRound(humanChoice, computerChoice) {
     case 'paper':
       switch(computerChoice) {
         case 'rock':
-          resultDiv.textContent = 'You win! paper beats rock';
+          animateResult('You win! paper beats rock');
           humanScore++;
           displayScore();
           break;
         case 'paper':
-          resultDiv.textContent = 'Draw';
+          animateResult('Draw');
           displayScore();
           break;
         case 'scissors':
-          resultDiv.textContent = 'You lose! scissors beat paper';
+          animateResult('You lose! scissors beat paper');
           computerScore++;
           displayScore();
           break;
@@ -75,17 +84,17 @@ function playRound(humanChoice, computerChoice) {
     case 'scissors':
       switch(computerChoice) {
         case 'rock':
-          resultDiv.textContent = 'You lose! rock beats scissors';
+          animateResult('You lose! rock beats scissors');
           computerScore++;
           displayScore();
           break;
         case 'paper':
-          resultDiv.textContent = 'You win! scissors beat paper';
+          animateResult('You win! scissors beat paper');
           humanScore++;
           displayScore();
           break;
         case 'scissors':
-          resultDiv.textContent = 'Draw';
+          animateResult('Draw');
           displayScore();
           break;
       }
