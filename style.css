@@ -2,6 +2,10 @@ body {
   background-color: #222831;
   font-family: 'Roboto', sans-serif;
 }
+h1 {
+  flex: 1;
+  text-align: center;
+}
 div {
   color: #EEEEEE;
   text-align: center;
@@ -43,10 +47,6 @@ img:active {
 /* flexbox styling */
 .title {
   display: flex;
-}
-h1 {
-  flex: 1;
-  text-align: center;
 }
 .scoreContainer {
   display: flex;
